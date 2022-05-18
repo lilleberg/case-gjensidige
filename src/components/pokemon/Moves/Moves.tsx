@@ -7,18 +7,18 @@ interface Props {
 }
 
 const Moves: React.FunctionComponent<Props> = ({ pokemonObj }) => {
-  let moves = pokemonObj.moves.slice(0, 2).map((i) => {
-    let moveName: string = capitalFirstLetter(i.move.name);
+  const moves = pokemonObj.moves.slice(0, 2).map((i) => {
+    const elem: string = capitalFirstLetter(i.move.name);
     return (
-      <div key={i.move.name} className="move">
-        <h3>{moveName}</h3>
-      </div>
+      <p key={i.move.name} className="move">
+        {elem}
+      </p>
     );
   });
 
   return (
     <div className="movesContainer">
-      <h2>Moves:</h2>
+      <h2>Moves</h2>
       {moves}
     </div>
   );

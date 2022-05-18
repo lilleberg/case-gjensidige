@@ -1,14 +1,72 @@
+:root {
+  box-sizing: border-box;
+}
+
 .appRoot {
   display: flex;
   justify-content: center;
 }
 
+h1,
+h2,
+p {
+  margin: 0;
+}
+
 .infoContainer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 100px;
+  margin-top: 20px;
+  padding: 20px;
   width: 400px;
-  text-align: center;
-  font-weight: 100;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", "open sans", sans-serif;
+  border: 20px solid rgb(236, 216, 32);
+  border-radius: 10px;
+  background: rgb(152, 229, 255);
+}
+
+.image-info {
+  border: 5px solid rgb(158, 158, 158);
+  border-radius: 10px;
+}
+
+.imageContainer {
+  background: rgb(126, 91, 35);
+  background: radial-gradient(
+    circle,
+    rgb(245, 196, 139) 0%,
+    rgb(133, 106, 63) 100%
+  );
+}
+
+.imageContainer img {
+  padding: 20px;
+}
+
+.statsContainer {
+  border-top: 5px solid grey;
+  justify-content: center;
+  padding: 10px;
+  background-color: rgb(216, 209, 203);
+  gap: 5px;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+}
+
+h2 {
+  margin: 40px 0 5px 0;
+  font-size: 1.3rem;
+}
+
+.moves-abilities {
+  justify-content: space-around;
+}
+
+.d-flex {
+  display: flex;
 }

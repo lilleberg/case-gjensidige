@@ -1,5 +1,6 @@
 import React from "react";
 import { Pokemon } from "../types";
+import Abilities from "./pokemon/Abilities/Abilities";
 import Image from "./pokemon/Image/Image";
 import Moves from "./pokemon/Moves/Moves";
 import Name from "./pokemon/Name/Name";
@@ -21,14 +22,16 @@ const InfoContainer: React.FunctionComponent<Props> = ({ pokemon }) => {
             imgSrc={pokemon.sprites.other.dream_world.front_default}
             altText={pokemon.name}
           />
-
           <Stats
             number={pokemon.id}
             height={pokemon.height}
             weight={pokemon.weight}
           />
         </div>
-        <Moves pokemonObj={pokemon} />
+        <div className="moves-abilities d-flex">
+          <Moves pokemonObj={pokemon} />
+          <Abilities pokemonObj={pokemon} />
+        </div>
       </div>
     );
   }
