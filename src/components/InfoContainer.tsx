@@ -1,6 +1,7 @@
 import React from "react";
 import { Pokemon } from "../types";
 import Image from "./pokemon/Image/Image";
+import Moves from "./pokemon/Moves/Moves";
 import Name from "./pokemon/Name/Name";
 import Stats from "./pokemon/Stats/Stats";
 
@@ -27,10 +28,7 @@ const InfoContainer: React.FunctionComponent<Props> = ({ pokemon }) => {
             weight={pokemon.weight}
           />
         </div>
-        <div className="moves">
-          <h2>Moves:</h2>
-          {getMoves(pokemon)}
-        </div>
+        <Moves pokemonObj={pokemon} />
       </div>
     );
   }
@@ -38,11 +36,3 @@ const InfoContainer: React.FunctionComponent<Props> = ({ pokemon }) => {
 };
 
 export default InfoContainer;
-
-function getMoves(pokemon: Pokemon) {
-  let moves = pokemon.moves.slice(0, 2).map((i) => {
-    return <h3 key={i.move.name}>{i.move.name}</h3>;
-  });
-
-  return moves;
-}
